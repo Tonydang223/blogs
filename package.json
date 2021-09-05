@@ -1,0 +1,36 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "nodejs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "beautiful":"prettier --single-quote --trailing-comma all --tab-width 4 --write 'src/**/*.{js,json,scss}'",
+    "css-compile": "node-sass --output src/public/css/ src/resources/scss/",
+    "css-watch": "npm run css-compile && npm run css-compile -- -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tonydang223/blogs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "hnhdang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tonydang223/blogs/issues"
+  },
+  "homepage": "https://github.com/Tonydang223/blogs#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
+  }
+}
